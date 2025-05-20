@@ -1,0 +1,32 @@
+Insights from "Die Physik der Musikinstrumente" by Yves Kemp:
+
+1. We hear pitch changes as ratios, not simple frequency steps. 
+   A doubling in frequency sounds like a consistent jump — 
+   this is why octaves feel evenly spaced.
+
+2. How an instrument is played affects how it sounds. 
+   Plucking, hitting, or bowing a string all lead to 
+   different vibration patterns and energy loss.
+
+3. Materials can influence the sound, but not always equally. 
+   In violins and organ pipes, the material and shape matter a lot. 
+   In flutes, the builder’s design often has a bigger impact.
+
+
+Insights from "The Human Voice in Speech and Singing":
+
+1. Breathing in speech and singing is actively controlled. 
+   Muscles constantly adjust to keep pressure stable, 
+   even as lung volume changes. Singers use much higher 
+   lung volumes and recoil forces than speakers.
+
+2. The pitch and tone of the voice are shaped by both 
+   the vibrating vocal folds and how the vocal tract 
+   filters the sound. Formants, natural resonances in 
+   the vocal tract, define the vowel sounds we hear.
+
+3. Singing demands much tighter control of pressure 
+   and pitch than speaking. For example, to sing 
+   consistently in tune, singers must adjust pressure 
+   and vocal fold tension in precise ways that go beyond 
+   what normal speech requires.

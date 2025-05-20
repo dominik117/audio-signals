@@ -1,4 +1,4 @@
-import simpleaudio as sa
+import pyaudio
 import wave
 import os
 
@@ -23,10 +23,21 @@ def play_audio(filepath, trim_ms=50):
                 print("File too short to trim.")
                 return
 
+            # Rewind to start and read only the trimmed frame range
+            wf.rewind()
             frames = wf.readframes(play_frames)
 
-        play_obj = sa.play_buffer(frames, nchannels, sampwidth, framerate)
-        play_obj.wait_done()
+        # Initialize PyAudio
+        p = pyaudio.PyAudio()
+        stream = p.open(format=p.get_format_from_width(sampwidth),
+                        channels=nchannels,
+                        rate=framerate,
+                        output=True)
+
+        stream.write(frames)
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
         print("Done.")
 
     except Exception as e:
