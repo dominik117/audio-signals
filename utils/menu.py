@@ -21,27 +21,28 @@ def show_main_menu():
 def show_week01_menu():
     while True:
         print("\n-- Week 1: Introduction to Acoustics --")
-        print("1. Play recorded audio")
-        print("2. Read description of acoustic features")
-        print("3. View A4 drawing link")
+        print("1. Sine Wave Playground")
+        print("2. View A4 drawing link")
+        print("3. Read description of acoustic features")
         print("4. View article insights")
-        print("5. Sine Wave Playground")
+        print("5. Play environment recording")
         print("6. Back")
         choice = input("> ")
 
         base = "submissions/week01"
-        
+
         if choice == "1":
-            play_audio(os.path.join(base, "Track-5.wav"))
+            playground.run_playground()
         elif choice == "2":
-            show_text_file(os.path.join(base, "description.txt"))
-        elif choice == "3":
             print("View the image at: https://ibb.co/cccfp2w4")
+        elif choice == "3":
+            show_text_file(os.path.join(base, "description.txt"))
         elif choice == "4":
             show_text_file(os.path.join(base, "insights.txt"))
         elif choice == "5":
-            playground.run_playground()
+            play_audio(os.path.join(base, "environment_recording.wav"))
         elif choice == "6":
             break
         else:
             print("Invalid input. Try again.")
+
