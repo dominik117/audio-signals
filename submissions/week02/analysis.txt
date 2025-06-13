@@ -1,0 +1,9 @@
+The steady, mid-range energy around 2 kHz now reflects the speaker’s voice articulating Frost’s poem over the 35 s span. 
+The broad bandwidth (~3,4 kHz) combines three layers: low-frequency engine rumble (the Triumph T120), mid-range vocal harmonics, and higher-frequency piano overtones. 
+The continuous noise floor and high RMS come largely from the motorcycle’s engine, which saturates the lower spectrum and keeps energy elevated even during pauses in speech. 
+The zero-crossing rate near 0,5 confirms that this engine noise and room ambience produce a broadband, noise-like background rather than discrete tonal lines. 
+Intermittent spikes in the spectrogram that reach into the high frequencies correspond to Chopin’s Raindrop melody—its piano key strikes produce vertical “comb” patterns atop the hum. 
+Speech segments appear as transient boosts in the 300 Hz–1 kHz band with clear formant structure, riding on the engine’s roar. 
+A faint 50 Hz harmonic series betrays electrical hum or alternator noise, distinct from the motorcycle’s mechanical vibration. 
+The full-scale waveform peaks occur when speech, piano accents and engine revs briefly combine—these are your richest, most energetic moments. 
+Together, the low-frequency rumble, mid-range vocal formants, and high-frequency piano transients form a unique tri-layered fingerprint you can exploit to segment engine, voice, and music automatically.
