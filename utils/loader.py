@@ -24,3 +24,13 @@ def show_stepwise(text):
     for idx, sentence in enumerate(sentences, start=1):
         print(f"\n• Analysis {idx}/{total} {sentence.strip()}")
         input("Press Enter to continue…")
+
+def prompt(message: str) -> str:
+    """
+    Print the given prompt message and return what the user types.
+    """
+    try:
+        return input(message)
+    except KeyboardInterrupt:
+        print("\nInterrupted. Returning empty string.")
+        return ""
