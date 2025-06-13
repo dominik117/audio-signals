@@ -64,7 +64,6 @@ def show_week01_menu():
         else:
             print("Invalid input. Try again.")
 
-
 def run_week02():
     base = "submissions/week02"
     wav, fs = load_wav(os.path.join("submissions/week01", "environment_recording.wav"))
@@ -167,7 +166,6 @@ def show_week03_menu():
         else:
             print("Invalid input, please pick 1–7.")
 
-
 def show_week04_menu():
     while True:
         print("\n-- Week 4: Sequence-to-Sequence Learning --")
@@ -183,7 +181,7 @@ def show_week04_menu():
         elif choice == "2":
             print_summary.print_backprop_paper_summary()
         elif choice == "3":
-            show_text_file("submissions/week04/tuning_insights.txt")
+            print_summary.print_tuned_model_summary()
         elif choice == "4":
             break
         else:

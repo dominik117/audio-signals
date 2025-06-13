@@ -6,6 +6,7 @@ import os
 import sys
 import subprocess
 from textwrap import indent
+import re
 
 
 alphabet = list("abcdefghijklmnopqrstuvwxyz!")
@@ -111,6 +112,8 @@ def decode_sequence():
         print("Please train models first (option 1).\n")
         return
 
+    _invalid_chars = re.compile(r'[^.\-\s]')
+
     while True:
         morse_in = input(
             "Enter Morse (e.g. '.- -... -.-.'), or 'back' to go back: "
@@ -118,6 +121,10 @@ def decode_sequence():
         if morse_in.lower() == 'back':
             print("Back to Week 3 menu.\n")
             break
+
+        if _invalid_chars.search(morse_in):
+            print("Invalid input: only '.', '-' and spaces are allowed. Please try again.\n")
+            continue
 
         tokens = morse_in.split()
         if not tokens:

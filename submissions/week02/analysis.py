@@ -125,18 +125,15 @@ def detect_chopin_onsets(samples: np.ndarray, fs: int) -> list:
     Detect Chopin piano note onsets using spectral flux + high-band energy.
     Returns a list of onset times in seconds.
     """
-    # 1) Remove engine rumble with a 4th-order bandpass (200 Hz – Nyquist)
     b, a = signal.butter(4, [200/(fs/2), 0.9], btype='band')
     x = signal.lfilter(b, a, samples)
 
-    # 2) STFT parameters
     win = 1024
     hop = 256
     w = np.hanning(win)
     prev_mag = np.zeros(win//2 + 1)
     freqs = np.fft.rfftfreq(win, 1/fs)
 
-    # 3) Thresholds (tweak if needed)
     FLUX_THRESH   = 1e6
     ENERGY_THRESH = 1e5
 

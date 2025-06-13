@@ -1,4 +1,3 @@
-# utils/hmm.py
 
 import numpy as np
 
