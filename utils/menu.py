@@ -3,7 +3,8 @@ from utils.loader import show_text_file, open_link
 from utils.audio import play_audio, load_wav
 from submissions.week01 import playground
 from submissions.week02 import analysis 
-from submissions.week03 import morse 
+from submissions.week03 import morse
+from submissions.week04 import print_summary
 
 
 def show_main_menu():
@@ -12,6 +13,7 @@ def show_main_menu():
         print("1. Week 1 – Introduction to Acoustics")
         print("2. Week 2 – Signal Analysis")
         print("3. Week 3 – Hidden Markov Models")
+        print("4. Week 4 – Neural Networks")
         print("5. Exit")
         choice = input("> ")
 
@@ -21,6 +23,8 @@ def show_main_menu():
             run_week02()
         elif choice == "3":
             show_week03_menu()
+        elif choice == "4":
+            show_week04_menu()
         elif choice == "5":
             print("Goodbye!")
             break
@@ -168,15 +172,22 @@ def show_week04_menu():
     while True:
         print("\n-- Week 4: Sequence-to-Sequence Learning --")
         print("1. Train and test the tuned model")
-        print("2. Back")
+        print("2. Read summary of reference paper")
+        print("3. Read tuning insights")
+        print("4. Back")
+
         choice = input("> ").strip()
 
         if choice == "1":
             run_model_tuned()
         elif choice == "2":
+            print_summary.print_backprop_paper_summary()
+        elif choice == "3":
+            show_text_file("submissions/week04/tuning_insights.txt")
+        elif choice == "4":
             break
         else:
-            print("Invalid input. Try 1 or 2.")
+            print("Invalid input..")
 
 import subprocess
 
